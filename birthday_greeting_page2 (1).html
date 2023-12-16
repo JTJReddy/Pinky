@@ -46,15 +46,10 @@
       }
   </style>
   <script>
-    window.onload = function() {
-      var audio = new AudioContext('music2.mp3');
+    function playMusic() {
+      var audio = new Audio('music2.mp3');
       audio.play();
     }
-    document.querySelector('button').addEventListener('click',function(){
-	context.resume().then(() => {
-	    console.log('Playback resumed SuccessFully');
-	});
-    });
   </script>
 </head>
 <body onload="playMusic()">
